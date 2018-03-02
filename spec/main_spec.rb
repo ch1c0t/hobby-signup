@@ -46,6 +46,14 @@ describe do
   end
 
   context 'when it fails' do
+    it 'stays on the same page and shows the errors' do
+      signup = Signup.new
+      signup.name, signup.password, signup.password_confirmation = 'a', '123', '1234'
+      signup.submit
+
+      assert { signup.browser.url == 'http://127.0.0.1:8080/signup' }
+      assert { signup.browser.text.include? "Password confirmation doesn't match Password" }
+    end
   end
 
   after do
