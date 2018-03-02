@@ -14,11 +14,11 @@ class Signup
   end
 
   attr_accessor :browser
-  attr_accessor :name, :password, :password_confirmation
+  attr_accessor :email, :password, :password_confirmation
 
   def submit
     form = @browser.form
-    form.text_field(name: 'name').set @name
+    form.text_field(name: 'email').set @name
     form.text_field(name: 'password').set @password
     form.text_field(name: 'password_confirmation').set @password_confirmation
     form.submit
@@ -38,7 +38,7 @@ describe do
   context 'when it succeeds' do
     it "redirects to '/signin'" do
       signup = Signup.new
-      signup.name, signup.password, signup.password_confirmation = 'a', '123', '123'
+      signup.email, signup.password, signup.password_confirmation = 'a', '123', '123'
       signup.submit
 
       assert { signup.browser.text.include? 'Sign in.' }
@@ -48,7 +48,7 @@ describe do
   context 'when it fails' do
     it 'stays on the same page and shows the errors' do
       signup = Signup.new
-      signup.name, signup.password, signup.password_confirmation = 'a', '123', '1234'
+      signup.email, signup.password, signup.password_confirmation = 'a', '123', '1234'
       signup.submit
 
       assert { signup.browser.url == 'http://127.0.0.1:8080/signup' }
