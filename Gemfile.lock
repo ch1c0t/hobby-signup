@@ -1,0 +1,91 @@
+PATH
+  remote: .
+  specs:
+    hobby-signup (0.0.0)
+      hobby
+      slim
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (5.1.5)
+      activesupport (= 5.1.5)
+    activerecord (5.1.5)
+      activemodel (= 5.1.5)
+      activesupport (= 5.1.5)
+      arel (~> 8.0)
+    activesupport (5.1.5)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (8.0.0)
+    awesome_print (1.8.0)
+    bcrypt (3.1.11)
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.2)
+    concurrent-ruby (1.0.5)
+    diff-lcs (1.3)
+    ffi (1.9.23)
+    hobby (0.1.2)
+      rack
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    method_source (0.9.0)
+    minitest (5.11.3)
+    power_assert (1.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    puma (3.11.2)
+    rack (2.0.4)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-core (3.7.1)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-power_assert (1.1.0)
+      power_assert (~> 1.1.0)
+      rspec (>= 2.14)
+    rspec-support (3.7.1)
+    rubyzip (1.2.1)
+    selenium-webdriver (3.9.0)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2)
+    slim (3.0.9)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 1.3.3, < 2.1)
+    sqlite3 (1.3.13)
+    temple (0.8.0)
+    thread_safe (0.3.6)
+    tilt (2.0.8)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    watir (6.10.3)
+      selenium-webdriver (~> 3.4, >= 3.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  awesome_print
+  bcrypt
+  hobby-signup!
+  pry
+  puma
+  rspec
+  rspec-power_assert
+  sqlite3
+  watir
+
+BUNDLED WITH
+   1.16.1

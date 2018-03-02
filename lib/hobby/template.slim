@@ -1,0 +1,15 @@
+doctype 5
+html
+  head
+    title Sign up
+  body
+    form(action=script_name method='post')
+      input(type='text' placeholder='Name' name='name' required)
+      input(type='password' placeholder='Password' name='password' required)
+      input(type='password' placeholder='Password Confirmation' name='password_confirmation' required)
+      button(type='submit') Submit
+
+    - if @errors
+      ul
+        - for error in @errors
+          li= error
